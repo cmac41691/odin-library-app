@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Odin Library Project</h1>
+
+  <div id="newBtn-container">
+    <button id="newBtn">New Book</button>
+  </div>
+
+  <div id="popup">
+    <form id="form">
+      <span class="close">&times;</span>
+      <legend>New Book</legend>
+
+      <div id="textInput">
+        <p><input type="text" id="title" name="title" placeholder="Title" required></p>
+        <p><input type="text" id="author" name="author" placeholder="Author" required></p>
+        <p><input type="number" id="pages" name="pages" placeholder="Pages" required></p>
+      </div>
+
+      <div id="checkBox">
+        <p>
+          <label for="read">Read:</label>
+          <input type="checkbox" id="read" name="read">
+        </p>
+      </div>
+
+      <button type="submit" id="addBtn">Add</button>
+    </form>
+  </div>
+
+  <div id="library-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
