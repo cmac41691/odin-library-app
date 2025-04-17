@@ -24,9 +24,20 @@ let newBook;
 
 // This Fuction to add book contructors to the library
 function addBookToLibrary() {
-   
-} 
+  e.preventDefault(); // prevent page refresh on submit
 
+const title = document.getElementById("title").value;  
+const author= document.getElementById("author").value;
+const pages = document.getElementById("pages").value;
+const hasBeenRead = document.getElementById("read").checked;
+
+newBook = new Book(title, author, pages, hasBeenRead);
+mylibrary.push(newBook); 
+newBook.bookData();
+
+document.getElementById("form").reset();
+popUpForm.style.display = "none"
+} 
 
 Book.prototype.bookData = function () {
     console.log(
@@ -38,7 +49,7 @@ Book.prototype.bookData = function () {
   };
   
   Book.prototype.toggleRead = function () {
-    this.hasBeenRead = !this.hasBeenRead;
+    this.hasBeenRead = !this.hasBeenRead; 
   }; 
   
 
