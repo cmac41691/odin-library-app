@@ -34,7 +34,7 @@ const hasBeenRead = document.getElementById("read").checked;
 newBook = new Book(title, author, pages, hasBeenRead);
 mylibrary.push(newBook); 
 newBook.bookData();
-renderLibrary();
+renderLibrary(); 
 
 document.getElementById("form").reset();
 popUpForm.style.display = "none"  
