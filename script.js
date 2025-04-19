@@ -19,11 +19,11 @@ function Book(title, author, pages, hasBeenRead){
     this.hasBeenRead = hasBeenRead;
 }
 // These variables create, and adds to the library
-let mylibrary = [];
+let myLibrary = [];
 let newBook;
 
 // This Fuction to add book contructors to the library
-function addBookToLibrary() {
+function addBookToLibrary(e) {
   e.preventDefault(); // prevent page refresh on submit
 
 const title = document.getElementById("title").value;  
@@ -34,6 +34,7 @@ const hasBeenRead = document.getElementById("read").checked;
 newBook = new Book(title, author, pages, hasBeenRead);
 mylibrary.push(newBook); 
 newBook.bookData();
+renderLibrary();
 
 document.getElementById("form").reset();
 popUpForm.style.display = "none"  
@@ -53,41 +54,53 @@ Book.prototype.bookData = function () {
   }; 
   
 // render Library function
-function renderLibary() {
+function renderLibrary() {
   const container = document.getElementById("library-container");
-  container.innerHTML = ""; // This will clear the container first
+  container.innerHTML = ""; // clear old cards before rendering new ones
 
-  mylibrary.forEach((book, index) => {
+  myLibrary.forEach((book, index) => {
     const card = document.createElement("div");
     card.classList.add("book-card");
 
     const title = document.createElement("h3");
     title.textContent = book.title;
 
-    const author = document.createElement("h3")
-    author.textContent = "Author:" + book.author;
+    const author = document.createElement("h3");
+    author.textContent = "Author: " + book.author;
 
     const pages = document.createElement("p");
     pages.textContent = "Pages: " + book.pages;
 
     const read = document.createElement("p");
-    read.textContent = "Read: " +(book.hasBeenRead ? "Yes" : "No");
+    read.textContent = "Read: " + (book.hasBeenRead ? "Yes" : "No");
 
-  // Append these elements to the card  
-card.appendChild(title);
-card.appendChild(author);
-card.appendChild(pages);
-card.appendChild(read);
+    //  Remove Button
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.classList.add("remove-btn");
+    removeBtn.setAttribute("data-index", index);
 
-// Append card to the container
-container.appendChild(card);
+    const buttonSection = document.createElement("div");
+    buttonSection.classList.add("card-buttons");
+    buttonSection.appendChild(removeBtn);
 
-// Shows the Library  
-renderLibary();
+    //  Assemble card
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(pages);
+    card.appendChild(read);
+    card.appendChild(buttonSection);
+
+    container.appendChild(card);
+
+    // Event to Remove Book
+    removeBtn.addEventListener("click", (e) => {
+      const indexToRemove = e.target.getAttribute("data-index");
+      myLibrary.splice(indexToRemove, 1);
+      renderLibrary();
+    });
   });
-  
 }
-
 
 
 
