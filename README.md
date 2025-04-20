@@ -1,6 +1,6 @@
 # 📚 Odin Library App
 
-A simple digital library app built with **HTML, CSS, and JavaScript** as part of [The Odin Project](https://www.theodinproject.com/)'s curriculum. Users can add books they've read (or want to read), mark them as read/unread, and remove them from the collection.
+A simple digital library app built with **HTML, CSS, and JavaScript** as part of [The Odin Project](https://www.theodinproject.com/)'s curriculum. Users can ahtdd books they've read (or want to read), mark them as read/unread, and remove them from the collection.
 
 ---
 
@@ -16,8 +16,12 @@ A simple digital library app built with **HTML, CSS, and JavaScript** as part of
 
 ## 🚀 Demo
 
-![App Screenshot](https://github.com/cmac41691/odin-library-app/blob/main/screenshot.png)  
-*Note: Replace the above link with an actual image URL if you upload a screenshot to your repo.*
+## 🚀 Demo
+
+![App Screenshot](./screenshot.png) 
+
+🔗 [Live Demo](https://cmac41691.github.io/odin-library-app/)
+
 
 ---
 
@@ -40,7 +44,7 @@ A simple digital library app built with **HTML, CSS, and JavaScript** as part of
 
 ---
 
-## 🎯 Goals
+## 🎯 Goals 
 
 - Practice JavaScript object constructors
 - Gain experience with DOM manipulation
