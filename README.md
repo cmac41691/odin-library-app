@@ -12,13 +12,10 @@ A simple digital library app built with **HTML, CSS, and JavaScript** as part of
 - 🎨 Clean UI with responsive card-based layout
 - 📦 All data stored in-memory (array), no backend or localStorage used
 
----
 
 ## 🚀 Demo
 
-## 🚀 Demo
-
-![App Screenshot](./screenshot.png) 
+![App Screenshot](./screenshot.png)  
 
 🔗 [Live Demo](https://cmac41691.github.io/odin-library-app/)
 
@@ -40,7 +37,7 @@ A simple digital library app built with **HTML, CSS, and JavaScript** as part of
 
 ## 📸 Screenshots
 
-<img src="./screenshot.png" alt="Library UI Example" width="700"/>
+<img src="./screenshot.png" alt="Library UI Example" width="700"/> 
 
 ---
 
